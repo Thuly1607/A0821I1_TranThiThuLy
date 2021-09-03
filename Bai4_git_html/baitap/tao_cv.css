@@ -1,0 +1,26 @@
+.header{
+    height: 30px;
+    background: lightpink;
+}
+.container{
+
+}
+.clearfix{
+    clear: both;
+}
+.content{
+    float: left;
+    width: 30%;
+    background:aquamarine ;
+
+}
+.sidebar{
+     float: right;
+     width: 70%;
+    height: 860px;
+    background: antiquewhite;
+}
+.footer{
+    background: lightpink;
+    height: 30px;
+}
