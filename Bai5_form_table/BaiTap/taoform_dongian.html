@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .form1 {
+            width: 700px;
+            height: 500px;
+            border: 1px solid green;
+            background: lightpink;
+
+        }
+
+        .mauchu {
+            text-align: center;
+            border-width: 1px;
+            border-style: ridge;
+            background: red;
+
+        }
+
+        .kieuchu {
+            color: red;
+            font-size: 30px;
+        }
+
+        .kieuchusot {
+            color: coral;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<form class="form1">
+
+
+    <h1 class="mauchu">SỞ THÍCH CỦA BẠN</h1>
+    <br>
+
+    <table>
+        <tr>
+            <td class="kieuchu">
+                <label for="txtName1"> Yourname:</label>
+            </td>
+            <td>
+                <input type="text" placeholder="input name." id="txtName1" name="youname" value="Trần Ly Ly"
+                       size="35"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="kieuchu">
+                <label for="txtemail">Email:</label>
+            </td>
+            <td>
+                <input type="text" id="txtemail" name="email" size="35"/>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td class="kieuchu">
+                <label for="txtName1"> Sở thích:</label>
+
+            </td>
+            <td class="kieuchusot">
+                <label>
+                    <input type="checkbox"> Thể thao
+                    <input type="checkbox"> Âm nhạc
+                    <input type="checkbox"> Đọc sách
+                </label> <br>
+                <label>
+                    <input type="checkbox"> Lướt web
+                    <input type="checkbox"> Chơi game
+                    <input type="checkbox"> Điện ảnh
+                </label> <br>
+                <label>
+                    <input type="checkbox"> Du lịch
+
+                </label> <br>
+
+
+            </td>
+
+
+        </tr>
+        <tr>
+            <td>
+                <input type="hidden" name="class" value="A0821I1">
+
+                <input type="submit" value="SubmitForm">
+                <input type="reset" value="Reset">
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .form1 {
+            width: 700px;
+            height: 500px;
+            border: 1px solid green;
+            background: gold;
+
+        }
+
+        .mauchu {
+            text-align: center;
+            border-width: 1px;
+            border-style: ridge;
+            background: cyan;
+
+        }
+
+        .kieuchu {
+            color: red;
+            font-size: 30px;
+        }
+
+        .kieuchusot {
+            color: coral;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<form class="form1">
+
+
+    <h1 class="mauchu">ĐĂNG KÝ HỌC VIÊN</h1>
+    <br>
+
+    <table>
+        <tr>
+            <td class="kieuchu">
+                <label for="txtName1"> Họ Và Tên:</label>
+            </td>
+            <td>
+                <input type="text" placeholder="input name." id="txtName1" name="youname" value="Trần Ly Ly"
+                       size="35"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="kieuchu">
+                <label for="txtngaysinh">Ngày sinh:</label>
+            </td>
+            <td>
+                <input type="text" id="txtngaysinh" name="email" size="20"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="kieuchu">
+                <label>Giới tính:</label>
+            </td>
+            <td>
+                <label>
+                    <input type="radio"> Nam
+                    <input type="radio"> Nữ
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="kieuchu">
+                <label> Địa chỉ </label>
+            </td>
+            <td>
+                <textarea></textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="kieuchu">
+                <label> Lớp </label>
+            </td>
+            <td>
+                <select>
+                    <option>Chọn lớp</option>
+                    <option>A1</option>
+                    <option>A2</option>
+                    <option>B1</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="kieuchu">
+                <label for="txtemail">Email:</label>
+            </td>
+            <td>
+                <input type="text" id="txtemail" name="email" size="30"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="kieuchu">
+                <label for="txtdienthoai">Điện thoại:</label>
+            </td>
+            <td>
+                <input type="text" id="txtdienthoai" name="sdt" size="30"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="hidden" name="class" value="A0821I1">
+
+                <input type="submit" value="SubmitForm">
+                <input type="reset" value="Reset">
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+
+</body>
+</html>
