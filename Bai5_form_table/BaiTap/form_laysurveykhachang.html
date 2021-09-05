@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .inset {
+            border-top: 1px solid green;
+            border-bottom: 2px dotted darkgrey;
+            width: 1500px;
+            height: 30px;
+        }
+
+        .age {
+            height: 30px;
+            width: 500px;
+            overflow: scroll;
+            overflow-x: hidden;
+            margin-top: 1px;
+        }
+
+        .range {
+            height: 30px;
+            width: 500px;
+            overflow: scroll;
+            overflow-x: hidden;
+            margin-top: 1px;
+
+        }
+
+        .textar {
+            height: 100px;
+            width: 100px;
+        }
+        .kieuchu{
+
+            color: black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td class="inset">
+                <h1 class="kieuchu"><strong> Market Research Survey</strong></h1>
+                Market take a few monments to complete this satisfaction survey.
+            </td>
+        </tr>
+
+    </table>
+    <table>
+        <tr>
+            <td class="kieuchu">
+                <label><strong> What is your age range? :</strong></label>
+            </td>
+            <br>
+        </tr>
+        <tr>
+            <td>
+                <select class="age">
+                    <option>18-24</option>
+                    <option>25-34</option>
+                    <option>35-50</option>
+                    <option>50+</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class="kieuchu">
+                <label><strong> What is your yearly income range? :</strong></label>
+            </td>
+            <br>
+        </tr>
+        <tr>
+            <td>
+                <select class="range">
+                    <option>0$-25000$</option>
+                    <option>25,000$-50,000$</option>
+                    <option>50,000$-100,000$</option>
+                    <option>100,000$+</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td>
+                <label class="kieuchu"> <strong>Gender Identity</strong></label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    <input type="radio" name="gender"> Male <br>
+                    <input type="radio" name="gender"> Female <br>
+                    <input type="radio" name="gender"> Nonbinary <br>
+                    <input type="radio" name="gender"> Other <br>
+                    <input type="text" name="ge" size="25"/>
+                </label>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td>
+                <label class="kieuchu"><strong>Which of the following products have your purchased in the last 2 months. Please check all that
+                    apply.</strong></label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    <input type="checkbox">Product 1 <br>
+                    <input type="checkbox">Product 2 <br>
+                    <input type="checkbox">Product 3
+                </label>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>
+                <label class="kieuchu"><strong> How of the following products have your purchased in the last 2 months. Please check all that
+                    apply.</strong></label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    <input type="radio" name="gender">Daily<br>
+                    <input type="radio" name="gender">Weekly<br>
+                    <input type="radio" name="gender">Monthly
+                </label>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>
+                <label class="kieuchu">
+                    <strong>What would you pay for the new product?</strong>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td style="float: left">$</td>
+            <td style="float: left">
+                <input type="number">.<input type="number">
+            </td>
+
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>
+                <label class="kieuchu"><strong>What features would you like to see in the new product.</strong></label>
+            </td>
+        </tr>
+    </table>
+    <tr class="textar">
+        <td style="height: 50px" ;>
+            <label><textarea></textarea></label>
+        </td>
+    </tr>
+    <table>
+        <tr>
+            <td>
+                <label class="kieuchu"><strong> Please rate your level of agrement with the following statement.</strong></label>
+            </td>
+        </tr>
+    </table>
+    <table border="1" cellspacing="0" style="text-align: center">
+        <tr border="1" cellspacing="0" style="text-align: center">
+            <td></td>
+            <th> Strongly Disagree</th>
+            <th> Disagree</th>
+            <th> Agree</th>
+            <th> Strong Agree</th>
+        </tr>
+        <tr>
+            <td>Our producted are priced fairly</td>
+            <td><input type="radio" name="gender">1</td>
+            <td><input type="radio" name="gender">2</td>
+            <td><input type="radio" name="gender">3</td>
+            <td><input type="radio" name="gender">4</td>
+        </tr>
+        <tr>
+            <td>Our producted are high quality</td>
+            <td><input type="radio" name="gender">1</td>
+
+            <td><input type="radio" name="gender">2</td>
+
+            <td><input type="radio" name="gender">3</td>
+
+            <td><input type="radio" name="gender">4</td>
+
+        </tr>
+        <tr>
+            <td>You would recomment our product to a friend to cowoke</td>
+            <td><input type="radio" name="gender">1</td>
+
+            <td><input type="radio" name="gender">2</td>
+
+            <td><input type="radio" name="gender">3</td>
+
+            <td><input type="radio" name="gender">4</td>
+
+        </tr>
+    </table>
+    <br>
+
+    <input type="button" VALUE="SUBMIT">
+    </form>
+</body>
+</html>
