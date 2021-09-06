@@ -44,7 +44,7 @@
     <table>
         <tr>
             <td class="inset">
-                <h1 class="kieuchu"><strong> Market Research Survey</strong></h1>
+                <h1 onmouseover="mouseover()" onmouseout="mouseout()" id="demo" class="kieuchu"><strong> Market Research Survey</strong></h1>
                 Market take a few monments to complete this satisfaction survey.
             </td>
         </tr>
@@ -216,6 +216,14 @@
     <br>
 
     <input type="button" VALUE="SUBMIT">
+    <script>
+    function mouseover() {
+    document.getElementById("demo").style.color="red";
+    }
+    function mouseout() {
+    document.getElementById("demo").style.color="black";
+    }
+    </script>
     </form>
 </body>
 </html>
