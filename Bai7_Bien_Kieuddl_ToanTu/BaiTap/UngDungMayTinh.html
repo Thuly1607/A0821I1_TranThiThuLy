@@ -6,8 +6,8 @@
 </head>
 <body>
 <h2>Caculator</h2>
-<input  id="number1">
-<input  id="number2">
+<input id="number1">
+<input id="number2">
 <br><br>
 <button id="addition" onclick="add()" value="add">Addition(+)</button>
 <button id="subtraction" onclick="sub()" value="sub">Subtraction(-)</button>
@@ -18,40 +18,40 @@
 <script>
 
 
-  function add() {
-    let add = document.getElementById('addition').value;
-    let number1=document.getElementById('number1').value;
-    let number2=document.getElementById('number2').value;
-    result = parseInt(number1)+parseInt(number2);
-    document.getElementById('result').innerText ='Result Addition:' + result;
-  }
+    function add() {
+        let add = document.getElementById('addition').value;
+        let number1 = document.getElementById('number1').value;
+        let number2 = document.getElementById('number2').value;
+        let result = parseInt(number1) + parseInt(number2);
+        document.getElementById('result').innerText = 'Result Addition:' + result;
+    }
 
-  function sub() {
-    let sub = document.getElementById('subtraction').value;
-    let number1=document.getElementById('number1').value;
-    let number2=document.getElementById('number2').value;
-    result = parseInt(number1)-parseInt(number2);
-    document.getElementById('result').innerText ='Result Subtraction:' +result;
+    function sub() {
+        let sub = document.getElementById('subtraction').value;
+        let number1 = document.getElementById('number1').value;
+        let number2 = document.getElementById('number2').value;
+        let result = parseInt(number1) - parseInt(number2);
+        document.getElementById('result').innerText = 'Result Subtraction:' + result;
 
-  }
+    }
 
-  function mul() {
-    let mul = document.getElementById('multiplication').value;
-    let number1=document.getElementById('number1').value;
-    let number2=document.getElementById('number2').value;
-    result = parseInt(number1) * parseInt(number2);
-    document.getElementById('result').innerText ='Result Multiplication:'+ result;
+    function mul() {
+        let mul = document.getElementById('multiplication').value;
+        let number1 = document.getElementById('number1').value;
+        let number2 = document.getElementById('number2').value;
+        let result = parseInt(number1) * parseInt(number2);
+        document.getElementById('result').innerText = 'Result Multiplication:' + result;
 
-  }
+    }
 
-  function divide() {
-    let divide = document.getElementById('divide').value;
-    let number1 = document.getElementById('number1').value;
-    let number2 = document.getElementById('number2').value;
-    result = parseInt(number1) / parseInt(number2);
-    document.getElementById('result').innerText ='Result Division:' +result;
+    function divide() {
+        let divide = document.getElementById('divide').value;
+        let number1 = document.getElementById('number1').value;
+        let number2 = document.getElementById('number2').value;
+        let result = parseFloat(number1) / parseFloat(number2);
+        document.getElementById('result').innerText = 'Result Division:' + result;
 
-  }
+    }
 
 </script>
 </body>
