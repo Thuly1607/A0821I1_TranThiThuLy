@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="month" type="text">
+    <button onclick="convert()" style="background-color: deeppink">Tính số ngày</button>
+    <h2 id="result"></h2>
+<script>
+    function convert() {
+        let Day = parseInt(document.getElementById('month').value);
+        let Date;
+        switch (Day) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                Date = "Tháng  có 31 ngày ";
+                break;
+            case 2:
+                Date = "Tháng  có 28 ngày hoặc 29 ngày ";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                Date = "Tháng  có 30 ngày ";
+                break;
+            default:
+                Date = " bạn nhâp không đúng? ";
+        }
+        document.getElementById('result').innerText =Date;
+    }
+</script>
+</body>
+</html>

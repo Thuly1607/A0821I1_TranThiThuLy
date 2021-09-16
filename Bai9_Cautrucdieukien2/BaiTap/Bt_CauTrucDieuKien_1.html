@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cấu trúc điều kiện 1</title>
+</head>
+<body>
+<p>Bài 1: Nhập vào hai số a và b kiểm tra a có chia hết cho b hay không?</p>
+<label for="a">A: </label>
+<input id="a" type="text" size=" 20px">
+<label for="b">B: </label>
+<input id="b" type="text" size=" 20px">
+<input type="button" value="Check" onclick="CheckA()">
+<p id="result"></p>
+<script>
+    function CheckA() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let ch = document.getElementById("result")
+        if (a % b === 0) {
+            ch.innerHTML = "<b>a divisible b</b>"
+        } else {
+            ch.innerHTML = "<b>a Not divisible b</b>"
+        }
+    }
+</script>
+<hr>
+<p>Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.</p>
+<label for="age">Age:</label>
+<input id="age" type="text" size="20px">
+<input type="button" value="Check" onclick="CheckAge()">
+<p id="result1"></p>
+<script>
+    function CheckAge() {
+        let age = parseInt(document.getElementById("age").value);
+        let ag = document.getElementById("result1")
+        if (age >= 15) {
+            ag.innerHTML = "<b>Học sinh đủ tuổi học lơp 10</b>"
+        } else {
+            ag.innerHTML = "<b>Học sinh không đủ tuổi học lơp 10</b>"
+        }
+    }
+</script>
+<hr>
+<p>Bài 3: Nhập một số nguyên bất kỳ và in kw ra màn hình để nói cho người dùng biết số đó số lớn hay nhỏ hơn 0? </p>
+<label for="int"> Inter: </label>
+<input id="int" type="text" size="20px">
+<input type="button" value="check" onclick="CheckInt()">
+<p id="result2"></p>
+<script>
+    function CheckInt() {
+        let int = parseInt(document.getElementById("int").value);
+        let check = document.getElementById("result2")
+        if (int > 0) {
+            check.innerHTML = "<b>Số nguyên dương lớn hơn 0</b>"
+        } else {
+            check.innerHTML = "<b>Số nguyên dương nhỏ hơn 0</b>"
+        }
+
+    }
+</script>
+<hr>
+<p>Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó.</p>
+<label for="a1">Int A</label>
+<input id="a1" type="text" size="15px">
+<label for="b1">Int B</label>
+<input id="b1" type="text" size="15px">
+<label for="c1">Int C</label>
+<input id="c1" type="text" size="15px">
+<input type="button" value="check" onclick="CheckIn()">
+<p id="result3"></p>
+<script>
+    function CheckIn() {
+        let a1 = parseInt(document.getElementById("a1").value);
+        let b1 = parseInt(document.getElementById("b1").value);
+        let c1 = parseInt(document.getElementById("c1").value);
+        let check = document.getElementById("result3");
+        if (a1 > b1 && a1 > c1) {
+            check.innerHTML = "<b>Số lớn nhất là số a</b>"
+        } else if (b1 > a1 && b1 > c1) {
+            check.innerHTML = "<b>Số lớn nhất là số b</b>"
+        } else {
+            check.innerHTML = "<b>Số lớn nhất là số c</b>"
+        }
+    }
+
+</script>
+<hr>
+<p> Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</p>
+<label for="test"> Test Marks </label>
+<input id="test" type="text" size="15px">
+<label for="midterm">Midterm Score</label>
+<input id="midterm" type="text" size="15px">
+<label for="tend">End Score</label>
+<input id="tend" type="text" size="15px">
+<input type="button" value="check" onclick="checkPoint()">
+<p id="result4"></p>
+
+<script>
+    function checkPoint() {
+        let test = parseFloat(document.getElementById("test").value);
+        let midterm = parseFloat(document.getElementById("midterm").value);
+        let tend = parseFloat(document.getElementById("tend").value);
+        let ck = document.getElementById("result4")
+        let average = (tend * 3 + test + midterm * 2) / 6;
+        if (average >= 9) {
+            ck.innerHTML = "<b>Exelent</b>"
+        } else if (average > 7) {
+            ck.innerHTML = "<b>Good</b>"
+        } else if (average > 6) {
+            ck.innerHTML = "<b>Average</b>"
+        } else {
+            ck.innerHTML = "<b>Below</b>"
+        }
+
+    }
+</script>
+<hr>
+/*5% nếu tổng doanh số nhỏ hơn hoặc bằng 100 triệu.
+10% nếu tổng doanh số nhỏ hơn hoặc bằng 300 triệu.
+20 % nếu tổng doanh số là lớn hơn 300 triệu.*/
+<p>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</p>
+<label for="sale">Sales</label>
+<input id="sale" type="text" size="15px">
+<input type="button" value="Commission" onclick="check()">
+<p id="result5"></p>
+<script>
+    function check() {
+        let sale = parseFloat(document.getElementById("sale").value);
+        let ck = document.getElementById("result5")
+        if (sale <= 100) {
+            ck.innerHTML = "<b>Hoa hồng: </b>" + sale * 5 / 100 + "<b>VND</b>";
+        } else if (sale < 300) {
+            ck.innerHTML = "<b>Hoa hồng: </b>" + sale * 10 / 100 + "<b>VND</b>";
+        } else {
+            ck.innerHTML = "<b>Hoa hồng: </b>" + sale * 20 / 100 + "<b>VND</b>";
+        }
+    }
+
+</script>
+<hr>
+/* Phí thuê bao bắt buộc là 25 nghìn.
+600 đồng cho mỗi gọi của 50 phút đầu tiên.
+400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.*/
+<p>Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</p>
+<label for="time">Time</label>
+<input id="time" type="text" size="15px">
+<input type="button" value="Phone Change" onclick="PhoneChange()">
+<p id="result6"></p>
+<script>
+    function PhoneChange() {
+        let time = parseFloat(document.getElementById("time").value);
+        let CONST_POSTAGE = 25;
+        let res = document.getElementById("result6");
+        if (time <= 50) {
+            res.innerHTML = "<b>Cước điện thoại là: </b>" + (CONST_POSTAGE + (600 * time) )+ "<b>VND</b>";
+        } else if (time <= 150) {
+            res.innerHTML = "<b>Cước điện thoại là:</b>" + (CONST_POSTAGE + (400 * time) )+ "<b>VND</b>";
+        } else {
+            res.innerHTML = "<b>Cước điện thoại là:</b>" + (CONST_POSTAGE + (200 * time)) + "<b>VND</b>";
+        }
+    }
+</script>
+</body>
+</html>

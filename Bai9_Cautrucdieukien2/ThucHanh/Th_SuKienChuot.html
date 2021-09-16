@@ -2,27 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SU</title>
+    <title>Sự kiện chuột</title>
+
 </head>
 <body>
 <form>
-    <img src id="myImage" src="bongda.jpg">
+    <img id="myImage" src="bongda.jpg" style="position: absolute;left: 0;top: 0;" height="150px"  width="150px" alt="anh bong da">
     <p>Click button below to move the image to right</p>
-    <input type="button"value="Click Me">
+    <input type="button" value="Click Me" onclick="moveRight()"/>
 </form>
 <script>
-    let imObj=null;
-    function init() {
-        imObj=document.getElementById('myImage');
-        imObj.style.position='relative';
-        imObj.style.left='0px';
-    }
-    function moveRight() {
-        imObj.style.left=parseInt(imObj.style.left)+10+'px';
-    }
-    window.onload=init;
-</script>
+    let imObj = null;
+    imObj = document.getElementById('myImage');
 
-<input type="button"value="Click Me"onClick="moveRight();"/>
+    function init() {
+        imObj = document.getElementById('myImage');
+        imObj.style.position = 'relative';
+        imObj.style.left = '0px';
+    }
+
+    function moveRight() {
+        imObj.style.left = parseInt(imObj.style.left) + 10 + 'px';
+    }
+
+    window.onload = init;
+</script>
 </body>
 </html>
