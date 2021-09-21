@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<p>Bài 5: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu, số tháng cho vay và lãi
+    xuất hàng tháng.</p>
+<p><b>Bài 5:</b> Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu,
+    số tháng cho vay và lãi xuất hàng tháng.</p>
+<label htmlFor="a"> Số tiền gửi vào ngân hàng :</label>
+<input type="text" value="" id="a">
+
+<label htmlFor="r"> Lãi xuất (%):</label>
+<input type="text" value="" id="r">
+
+<label htmlFor="n"> Số tháng gửi :</label>
+<input type="text" value="" id="n">
+
+<input type="button" value="Calculate" onClick="Calculate()">
+<h3 id="result"></h3>
+<script>
+    let res = document.getElementById("result");
+
+    function Calculate() {
+        let a = parseFloat(document.getElementById("a").value);
+        let r = parseFloat(document.getElementById("r").value);
+        let n = parseFloat(document.getElementById("n").value);
+        let lai = 0;
+        for (let i = 1; i <= n; i++) {
+            lai = a - (a * r / 100);
+            a += lai;
+        }
+        res.innerHTML = "Tổng là: " + a +  "VND";
+
+    }
+
+</script>
+</body>
+</html>

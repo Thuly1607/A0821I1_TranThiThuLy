@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<p><b>Bài 1: In dãy Finonaci</b></p>
+<script>
+    let f1, f2, fn, res;
+    f1 = 1;
+    f2 = 1;
+    res = ' 1 1 ';
+    for (let i = 3; i <= 100; i++) {
+        fn = f1 + f2;
+        res = res + fn + ' ';
+        f1 = f2;
+        f2 = fn;
+    }
+    document.write(res + '...');
+</script>
+</body>
+</html>

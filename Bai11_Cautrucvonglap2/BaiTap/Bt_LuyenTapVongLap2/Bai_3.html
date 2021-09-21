@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<p><b>Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau</b></p>
+<h2 id="result1"></h2>
+<h2 id="result2"></h2>
+<h2 id="result3"></h2>
+<h2 id="result4"></h2>
+<script>
+    let res1 = document.getElementById("result1");
+    let res2 = document.getElementById("result2");
+    let res3 = document.getElementById("result3");
+    let res4 = document.getElementById("result4");
+
+    function tamgiac1() {
+        let i = 1;
+        let n = 5;
+        let col = '';
+        while (i <= n) {
+            for (let j = 1; j <= i; j++) {
+                col += "*"
+            }
+            col += "<br/>";
+            i++;
+        }
+        res1.innerHTML = col;
+    }
+
+    function tamgiac2() {
+        let i = 5;
+        let col = '';
+        while (i > 0) {
+            for (let j = 1; j <= i; j++) {
+                col += "*"
+            }
+            col+= "<br/>";
+            i--;
+        }
+        res2.innerHTML = col;
+    }
+
+    function tamgiac3() {
+        let n = 5;
+        let row = "";
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= (n - i); j++) {
+                row += "&nbsp&nbsp;";
+            }
+            for (let k = 1; k <= i; k++) {
+                row += '*';
+            }
+            row += "<br/>"
+            res3.innerHTML = row;
+        }
+    }
+
+    function tamgiac4() {
+        let n = 5;
+        let row = "";
+        for (let i = 0; i <= n; i++) {
+            for (let j = 1; j <= i; j++) {
+                row += "&nbsp&nbsp;";
+            }
+            for (let j = 5; j > i; j--) {
+                row += "*";
+            }
+            row += "<br/>";
+        }
+        res4.innerHTML = row;
+    }
+
+
+    tamgiac1();
+    tamgiac2();
+    tamgiac3();
+    tamgiac4();
+</script>
+</body>
+</html>

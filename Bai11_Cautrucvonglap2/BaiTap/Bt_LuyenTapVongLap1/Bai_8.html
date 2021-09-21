@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<p><b>Bài 8 :</b>Game đoán số.</p>
+<input type="button" id="btn1" value="PLAY" onclick="Play()">
+
+<script>
+
+
+    function Play() {
+        let as;
+        let min = parseInt(prompt("Inter Min:"));
+        let max = parseInt(prompt("Inter Max:"));
+        let rand = Math.round(Math.random() * (max - min) + min);
+        for (let i = 0; i < 3; i++) {
+            as = parseInt(prompt("Inter number of you:"));
+            if (rand ===as) {
+                alert("Chúc mừng bạn!")
+            } else if (as>rand) {
+                alert("Số lớn hơn! ")
+            } else {
+                alert("Số bé hơn!")
+            }
+        }
+    }
+</script>
+</body>
+</html>
