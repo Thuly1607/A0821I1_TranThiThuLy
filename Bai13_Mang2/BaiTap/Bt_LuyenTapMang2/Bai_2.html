@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<p>Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược. Ví dụ, nếu một mảng chứa các ký tự
+    [ 'c', 's', 'c', '2', '6', '1' ] sau khi thực hiện đảo ngược sẽ là "162csc"</p>
+<script>
+    let number = (prompt("Inter số phần tử của mảng:"));
+    let arr = Array(number);
+    for (let i = 0; i < number; i++) {
+        arr[i] = (prompt('Nhập giá trị arr[' + i + ']'));
+    }
+
+    arr.reverse();
+    alert(arr);
+</script>
+</body>
+</html>

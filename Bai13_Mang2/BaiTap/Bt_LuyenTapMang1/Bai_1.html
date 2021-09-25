@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương trình thực hiện tính và hiển thị xem có bao
+    nhiêu số nguyên lớn hơn hoặc bằng 10.</p>
+<input type="text" id="add-element">
+<button id="btn-add-element" onclick="btn_add_element()">add</button>
+<button id="btn-display-array" onclick="btn_display_array()">Display</button>
+<p id="result"></p>
+<p id="result1"></p>
+<script>
+    let array = Array();
+    let index = 0;
+
+    function btn_add_element() {
+        array[index] = document.getElementById('add-element').value;
+        document.getElementById('add-element').value = '';
+        index++;
+    }
+
+    function btn_display_array() {
+        let re = '<hr>';
+        let a1 = "";
+        for (let i = 0; i < array.length; i++) {
+            re += 'array[' + i + '] = ' + array[i] + '<br>';
+            if (array[i] >= 10) {
+                a1 += `${array[i]} ; `;
+            }
+        }
+        document.getElementById('result').innerHTML = re;
+        document.getElementById('result1').innerHTML = a1;
+
+    }
+</script>
+</body>
+</html>

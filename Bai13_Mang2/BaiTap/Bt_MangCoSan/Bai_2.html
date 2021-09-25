@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num=prompt("Enter a number:")
+    let newNumber='';
+    for(let i=0;i<num.length;i++){
+        if(i === num.length-1) newNumber+= num[i];
+        else if(num[i]%2==0){
+            newNumber += num[i] + '-';
+        }
+        else newNumber += number[i];
+    }
+    document.write(newNumber);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<input type="text" id="textEN">
+<button onclick="Search()">Search</button>
+<p id="result"></p>
+<script>
+    let arrEN = ["one", "two", "three", "four", "five", "six", "seven"];
+    let arrVI = ["1", "2", "3", "4", "5", "6", "7"];
+
+    function Search() {
+        let inputText = document.getElementById("textEN").value;
+        let check = false;
+        for (let i = 0; i < arrEN.length; i++)
+            if (arrEN[i] === inputText) {
+                let result = arrEN[i] + ":" + arrVI[i];
+                document.getElementById("result").innerHTML = result;
+                check = true;
+                break;
+            }
+        if (check === false) document.getElementById("result").innerText = 'Không tìm thấy !!!';
+    }
+</script>
+</body>
+</html>
