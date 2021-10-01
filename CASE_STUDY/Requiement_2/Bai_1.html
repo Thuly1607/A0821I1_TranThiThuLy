@@ -6,21 +6,26 @@
 </head>
 <body>
 <script>
-    let n = prompt('Nhập số phần tử của mảng a:');
-    let a = [];
-    let b = [];
-    let i = 0;
-    let result = 0;
-    while (i < n) {
-        let input = parseInt(prompt('Nhập các phần tử của mảng a:'))
-        a.push(input);
-        i++
+    let n = parseInt(prompt('Nhập số phần tử của mảng a.'));
+    let a = Array(n);
+    let b = Array(n);
+    let resulta = 'Mảng a: <br>' ;
+    let resultb = 'Prefix sums: <br>';
+    for(let i = 0; i<n; i++)
+
+    {
+        a[i]  =parseInt(prompt("Nhập phần tử của mảng(a)"));
+        if(i===0){
+            b[i] = a[i];
+        }
+        else b[i] = b[i-1] + a[i];
     }
-    for (let i = 0; i < n; i++) {
-        result += a[i];
-        b.push(result);
+    for(let i=0;i<n;i++)
+    {
+        resulta += 'a[' + i + '] = ' + a[i] + '<br>';
+        resultb += 'b[' + i + '] = ' + b[i] + '<br>';
     }
-    alert('Kết quả prefixSums(a) là ['+b+']')
+    document.write(resulta + '<br>' + resultb);
 </script>
 </body>
 </html>
