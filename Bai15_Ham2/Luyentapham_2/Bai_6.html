@@ -8,18 +8,21 @@
 <p>Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả
     về true, ngược lại trả về false.</p>
 <script>
-    let number = parseInt(prompt("Nhập vào số bất kỳ:"));
-    checkNumber();
-    if (check = true) {
-        document.write("true" );
+    let str = prompt("Nhập vào số bất  :");
+    let check = checkstr(str)
+    if (check) {
+        document.write(str + "  Số nguyên dương   ")
+    } else {
+        document.write(str + "  Không phải số nguyên  ")
     }
-    document.write("falde");
 
-    function checkNumber(n) {
-        if (n > 0) {
-            return true;
+    function checkstr(c) {
+        if (c>) {
+            return true;0
+        } else {
+            return false;
         }
-        return false;
+
     }
 </script>
 </body>
