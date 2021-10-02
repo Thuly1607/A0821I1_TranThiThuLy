@@ -6,23 +6,22 @@
 </head>
 <body>
 <script>
-    let n=parseInt(prompt("Nhập số phầm tử mảng:"));
-    let arr=Array();
-    let min =minArray(arr1);
-    for (let i=0;i<n;i++){
-        arr[i]=parseInt(prompt("Nhập phần tử của mảng arr"+i+":"));
-    }
-function minArray(arr1) {
+    let arr = [3, 5, -1, 9, -3, 7, 4];
+    function minArray(arr) {
+        if (arr.length == 0)
+            return -1;
+        let min = arr[0];
 
-        if (arr.length==0)
-         return -1;
-     let min=arr[0];
-     for (let i=1;i<arr.length;i++){
-         if (arr[i]<min){
-             min=arr[i];
-         }
-     }return min;
-}
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = i;
+            }
+        }
+        return min;
+    }
+    let min = minArray(arr);
+    alert('Gía trị nhỏ nhất trong mảng 1 là ' + arr[min]+' tại vị trí '+min);
+
 </script>
 </body>
 </html>

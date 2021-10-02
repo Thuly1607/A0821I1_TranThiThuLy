@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<script>
+    function footToMeter(foot) {
+        return 0.305 * foot;
+    }
+
+    function meterToFoot(meter) {
+        return 3.279 * meter;
+    }
+
+    let foot = parseFloat(prompt("Inter a foot:"));
+    let meter = parseFloat(prompt("Inter a meter:"));
+    ToMeter = footToMeter(foot);
+    ToFeet = meterToFoot(meter);
+    document.write(foot + 'F=' + ToMeter + 'm' + "<br>");
+    document.write(meter + 'M=' + ToFeet + 'f')
+
+</script>
+</body>
+</html>

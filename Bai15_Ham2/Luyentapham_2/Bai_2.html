@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được</p>
+<script>
+    let CONST_PI = 3.14;
+    let d = prompt("Nhập đường kính:");
+    document.write("Perimeter  " + '=' + perimeter()+"<br>");
+    document.write(" Area " + '=' + Area());
+    function perimeter() {
+        return d*CONST_PI;
+    }
+    function Area() {
+      return d*d*CONST_PI;
+    }
+</script>
+</body>
+</html>

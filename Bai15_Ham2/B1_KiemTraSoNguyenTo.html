@@ -7,25 +7,45 @@
 <body>
 
 <script>
-    function checkPrimeNumbers(n) {
-        if (n < 2) {
-            return false;
-        } else if (n == 2) {
-            return true;
-        } else if (n % 2 == 0) {
-            return false;
-        } else {
-            for (let i = 3; i < Math.sqrt(n); i += 2) {
-                if (n % i == 0) {
-                    return false;
+
+    function kiem_tra_snt(n)
+    {
+
+        // Biến cờ hiệu
+         let check = true;
+
+        // Nếu n bé hơn 2 tức là không phải số nguyên tố
+        if (n < 2){
+            check = false;
+        }
+        else if (n == 2){
+            check = true;
+        }
+        else if (n % 2 == 0){
+            check = false;
+        }
+        else{
+            // lặp từ 3 tới n-1 với bước nhảy là 2 (i+=2)
+            for (  let i = 3; i < Math.sqrt(n); i+=2)
+            {
+                if (n % i == 0){
+                    check = false;
                     break;
                 }
             }
         }
-        return true
-    }
 
-  
+        // Kiểm tra biến flag
+
+        if (check == true){
+            document.write(n + " là số nguyên tố <br/>");
+        }
+        else{
+            document.write(n + " không phải là số nguyên tố <br/>");
+        }
+    }
+    let  n=parseInt(prompt("NHập số nguyên tố:"))
+    kiem_tra_snt(n);
 </script>
 </body>
 </html>
