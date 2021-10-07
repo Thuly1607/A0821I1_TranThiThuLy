@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let res = document.getElementById("result");
+
+    function Temperature(c) {
+        this.tempC = c;
+        this.convertCtoF = function () {
+            res.innerHTML = `${c}  C = ${(this.tempC*1.8)+32}  F   `
+        }
+        this.convertCtoK=function () {
+            res.innerHTML +=`${c}  C = ${this.tempC + 273 }  K`
+        }
+    }
+    let temp=new Temperature(30);
+    temp.convertCtoF();
+    temp.convertCtoK();
+</script>
+</body>
+</html>
