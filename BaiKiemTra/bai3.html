@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form class="myform">
+<h1>Quản Lý Sách</h1>
+<p id="hienthi"></p>
+<button type="button" onclick="addOld()">Them san pham cu</button>
+<button type="button" onclick="addNew()">Them san pham moi</button>
+<button type="button" onclick="MuonSach()">Muon Sach</button>
+<button type="button" onclick="hienThi()">Hien Thi Sach Nhieu Nhat</button>
+</form>
+<script>
+    class Book {
+        constructor(id, name, publishingYear, numberBook,status) {
+            this.id = id;
+            this.name = name;
+            this. publishingYear =  publishingYear;
+            this.numberBook=numberBook;
+            this.status=status;
+        }
+
+        getId() {
+            return this.id;
+        }
+        checkID(value){
+            if(value.length!=5){
+                return false;
+            }
+            if (parseInt(value[0]) < 1 && parseInt(value[0])> 5) {
+                return  false;
+            }
+            for (let i = 1; i < value.length; i++) {
+                if (parseInt(value[i]) < 0 && parseInt(value[i]) > 9) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        setId(value) {
+            while (this.checkID(value)==false){
+                value=prompt("nhap lai id :");
+            }
+            this.id = value;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(value) {
+            this.name = value;
+        }
+
+        getPublishingYear() {
+            return this.publishingYear;
+        }
+        checkYear(value){
+            let ok=false;
+            if(isNumber(value)&&value.length==4){
+                ok=true;
+            }
+            return ok;
+        }
+        setPublishingYear(value) {
+            while(this.checkYear(value)==false){
+                value=prompt("nhap lai nam xuat ban :");
+            }
+            this.publishingYear = value;
+        }
+
+        getNumberBook() {
+            return this.numberBook;
+        }
+
+        setNumberBook(value) {
+            this.numberBook = value;
+        }
+        getStatus() {
+            return this.status;
+        }
+
+        checkStatus(value){
+            if(value=="true"||value=="false"){
+                return true;
+            }
+            return false;
+        }
+        setStatus(value) {
+            while (this.checkStatus(value)==false){
+                value=prompt("nhap lai trang thai (true or false)");
+            }
+            this.status = value;
+        }
+        toString() {
+            return this.id + " " + this.name + " " + this.publishingYear + " " + this.numberBook+""+this.status;
+        }
+    }
+    function isNumber(n) {
+        return !isNaN(parseFloat(n)) && !isNaN(n - 0)
+    }
+    let arr = [];
+
+    function addNew() {
+        let x = new Book();
+        x.setId(prompt("nhap id sach :"));
+        x.setName(prompt("nhap name sach:"));
+        x.setPublishingYear(prompt("nhap nam xuat ban:"));
+        x.setNumberBook(prompt("Nhap so quyen "))
+        x.setStatus(prompt("Nhap tinh trang :"));
+        arr.push(x);
+        console.log(arr.toString());
+        document.getElementById("hienthi").innerHTML=hienthi();
+        alert("them thanh cong");
+    }
+
+    function hienthi() {
+        let table = "<table border='1px solid black' cellpadding='20px'>"+"<tr><th>ID</th><th>name</th><th>Nam xuat ban</th><th>so quyen</th><th>Tinh trang</th></tr>"
+        for (let i = 0; i < arr.length; i++) {
+            table+="<tr>";
+            table+="<td>"+arr[i].getId()+"</td>";
+            table+="<td>"+arr[i].getName()+"</td>";
+            table+="<td>"+arr[i].getPublishingYear()+"</td>";
+            table+="<td>"+arr[i].getNumberBook()+"</td>";
+            table+="<td>"+arr[i].getStatus()+"</td>";
+            table+="</tr>";
+        }
+        return table;
+    }
+</script>
+</body>
+</html>

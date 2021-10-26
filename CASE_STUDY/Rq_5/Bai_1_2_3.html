@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    Bài 1: Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n. Với m, n là các số nhập từ bàn phím.
+</p>
+<script>
+    function createMatri() {
+        let m = parseInt(prompt("Nhập vào số dòng của ma trận :"));
+        let n = parseInt(prompt("Nhập vào số cột của ma trận"));
+        let total = 0;
+        let matrix = [];
+        for (let i = 0; i < m; i++) {
+            let row = [];
+            for (let j = 0; j < n; j++) {
+                row[j] = parseInt(prompt("Nhập vào số ma trận"));
+
+            }
+            matrix[i] = row;
+        }
+        return matrix;
+
+    }
+    let matrix1 =createMatri();
+    function totalEven(matrix) {
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] % 2 === 0) {
+                    total += matrix[i][j]
+                }
+            }
+        }
+        console.table(matrix);
+        alert("Tổng số chẵn:" + total)
+    }totalEven(matrix1);
+    /*.... BÀi 2....*/
+    let matrix2=createMatri();
+    function checkPrime(number) {
+        if (number < 2) {
+            return false;
+        }
+        for (let i = 2; i < Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    function findPrime(matrix) {
+        let primeArr=[];
+        for (let i=0;i<matrix.length;i++){
+            for (let j=0;j<matrix[i].length;j++){
+                if (checkPrime(matrix[i][j])){
+                    primeArr.push(matrix[i][j]);
+                }
+            }
+        }
+        console.table(matrix);
+        console.log(primeArr);
+    }
+    findPrime(matrix2);
+
+</script>
+</body>
+</html>

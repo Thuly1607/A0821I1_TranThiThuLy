@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number1 = parseInt(prompt("Nhập vào số nguyên dương 1:"));
+    let number2 = parseInt(prompt("Nhập vào số nguyên dương 2  :"));
+
+    function tongUocSo(a) {
+        let sum = 0;
+        for (let i = 1; i < a; i++)
+            if (a % i == 0) sum += i;
+        return sum;
+    }
+
+    function thanthiet(number1, number2) {
+        if (tongUocSo(number1) === number2) {
+            document.write("la hai so than thiet")
+        } else {
+            document.write("khong phai la si than thiet");
+        }
+    }
+
+    thanthiet(number1, number2);
+</script>
+</body>
+</html>

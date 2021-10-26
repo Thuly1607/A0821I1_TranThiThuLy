@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    Bài 1: Viết một hàm chuẩn hóa xâu ký tự: biến đổi xâu ký tự thành xâu sao cho trong xâu không có 2 dấu cách liền
+    nhau và bắt đầu mỗi từ phải in hoa. Ví dụ tRuong TaN HAI => Truong Tan Hai.
+    Và một hàm tìm từ dài nhất trong 1 xâu ký tự. Hàm main sử dụng các hàm này để nhập xâu ký tự từ bàn phím, in ra xâu
+    trước và sau khi chuẩn hóa, 1 từ dài nhất trong xâu đó.
+
+</p>
+<script>
+    function Standardized(name) {
+        name = name.trim().toLowerCase();
+        let nameArray = Array.from(name);
+        for (let i = 0; i < nameArray.length - 1; i++) {
+            if (nameArray[i] === "" & nameArray[i + 1] === "") {
+                for (let j = i + 1; j < nameArray.length - 1; j++) {
+                    nameArray[j] = nameArray[j + 1];
+                }
+                i--;
+                nameArray.pop();
+            }
+        }
+        nameArray[0] = nameArray[0].toUpperCase();
+        for (let i = 0; i < nameArray.length - 1; i++) {
+            if (nameArray[i] === "") {
+                nameArray[i + 1] = nameArray[i + 1].toUpperCase()
+            }
+        }
+        return nameArray.join("");
+    }
+
+    function maxLength(name) {
+          let maxName=arrName[0];
+          for (let)
+    }
+
+
+</script>
+</body>
+</html>

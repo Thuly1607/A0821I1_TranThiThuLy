@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        tr:nth-child(even) {
+            background-color: azure;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+<h1> Quản lý sản phẩm</h1>
+<button onclick="addNewProduct()">Thêm sản phẩm mới</button>
+<h2> Danh sách điện thoại</h2>
+<div id="disPlay">
+</div>
+<script>
+    class DienThoai {
+        constructor(id, name, manufacture, price) {
+            this.id = id;
+            this.name = name;
+            this.manufacture = manufacture;
+            this.price = price;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        setId(value) {
+            this.id = value;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(value) {
+            this.name = value;
+        }
+
+        getManufacturer() {
+            return this.manufacturer;
+        }
+
+        setManufacturer(value) {
+            this.manufacturer = value;
+        }
+
+        getPrice() {
+            return this.price;
+        }
+
+        setPrice(value) {
+            this.price = value;
+        }
+
+        toString() {
+            return this.id + " " + this.name + " " + this.manufacturer + " " + this.price;
+        }
+
+
+    }
+
+    let ProductList = [];
+
+    function addNewProduct() {
+        let A = new DienThoai();
+        A.setId(prompt("Nhập Id của sản phẩm:"));
+        A.setName(prompt("Nhập tên của sản phẩm:"));
+        A.setManufacturer(prompt("Nhập hãng sản xuất của sản phẩm:"));
+        A.setPrice(prompt("Nhập giá của sản phẩm:"));
+        productList.push(A);
+        productList.sort(function (a,b) {
+            var nameA=a.getName().toLowerCase(), nameB=b.getName().toLowerCase();
+            if (nameA < nameB) //sort string ascending
+                return -1;
+            if (nameA > nameB)
+                return 1;
+            return 0; //default return value (no sorting)
+        });
+        console.log(arr.toString());
+        document.getElementById("").innerHTML=disPlay();
+    }
+
+    function disPlay() {
+        let table = "<table border='1px solid black' cellpadding='20px'>" + "<tr><th>ID</th><th>name</th><th>Manufature</th><th>Price</th></tr>"
+        for (let i = 0; i < arr.length; i++) {
+            table += "<tr>";
+            table += "<td>" + arr[i].getId() + "</td>";
+            table += "<td>" + arr[i].getName() + "</td>";
+            table += "<td>" + arr[i].getManufacturer() + "</td>";
+            table += "<td>" + arr[i].getPrice() + "</td>";
+            table += "</tr>";
+        }
+        return table;
+
+    }
+</script>
+</body>
+</html>
+
+

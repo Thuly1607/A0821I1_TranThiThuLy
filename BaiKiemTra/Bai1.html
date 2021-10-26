@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = 0;
+    do {
+        n = parseInt(prompt("Nhập vào số lượng phần tử:"))
+    } while (n > 50);
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        let temp = parseInt(prompt("Nhập giá trị phần tử thứ:" + (i + 1)));
+        arr[i] = temp;
+    }
+    let tongle = 0;
+    let res = 0;
+    let count=0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 != 0)
+          tongle += arr[i];
+          count+=tongle;
+    }
+
+    res = tongle /count;
+    document.write("Mảng nhập vào là:" + arr + "Kết quả là:" + res);
+</script>
+</body>
+</html>
